@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Widget</title>
+    <link rel="stylesheet" type="text/css" href="./css/pluginstyle.css">
+</head>
+<body>
+    <div id="WidgetRoot">
+        <div class="chatbot-wrapper">
+            <div class="chatbot-content">
+                <div class="chatbot-icon">
+                    <img src="https://botman.io/img/logo.png">
+                </div>
+            </div>
+            <div class="chatbot-field">
+                <div class="chat-textarea">
+                    <div class="chat-head" >
+                        <div style="display: flex; align-items: center; padding: 0px 30px 0px 0px; font-size: 15px; font-weight: normal;">Chatbot</div>
+                        <div class="chat-close">
+                            <svg fill="#FFFFFF" height="15" viewBox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px; margin-top: 6px; vertical-align: middle;">
+                                <line x1="1" y1="15" x2="15" y2="1" stroke="white" stroke-width="1"></line>
+                                <line x1="1" y1="1" x2="15" y2="15" stroke="white" stroke-width="1"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div style="display: block; height: 415px; overflow: auto;">
+                        <ol class="chat-message" style="height: 390px;">
+                            <li class="chatbot-msg">
+                                <div class="msg">
+                                    <div id="message" class="msg-text">
+                                        <!--<p>Hi!
+                                                <br>Welcome, I am Chatbot! 🙂
+                                            </p> -->
+                                    </div>
+                                    <div class="time"></div>
+                                </div>
+                            </li>
+                        </ol>
+                        <div>
+                            <input id="userText" class="user-textarea" type="text" placeholder="Send a message...">
+                            <input class="submit-msg" type="submit" value="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <!-- <script src="./js/app.js" type="module" ></script> -->
+    <script>
+        // var chatbotWidget = {
+        //     frameEndpoint: '/chatapi/chatbot.html',
+        //     title:'Chatbot',
+        //     introMessage: 'Hello, I am a chatbot! Please enter your name',
+        //     mainColor:'#c02026',
+        //     aboutText:'',
+        //     bubbleBackground:'#c02026',
+        //     headerTextColor: '#fff',
+        // }
+    </script>
+    <!-- <script src="./js/app.js" type="module" ></script> -->
+    <script src="./js/chatbot.js" type="module"></script>
+</body>
+</html>

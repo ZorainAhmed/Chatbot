@@ -1,0 +1,208 @@
+<style>
+    .chatbot-wrapper{
+    position: fixed; 
+    bottom: 0px; 
+    right: 0px; 
+    z-index: 2147483647; 
+    box-sizing: content-box; 
+    overflow: hidden; 
+    min-width: 400px; 
+    min-height: 120px;
+}
+.chatbot-content{
+    position: relative; 
+    cursor: pointer;
+}
+.chatbot-icon{
+    background: rgb(64, 133, 145); 
+    display: flex; 
+    justify-content: center;
+    position: absolute; 
+    top: 38px; 
+    right: 20px; 
+    height: 60px; 
+    width: 60px; 
+    border: 0px; 
+    border-radius: 50%; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+}
+.chatbot-icon > img{
+    width: 100%; 
+    height: auto; 
+    border-radius: 999px;
+}
+.chatbot-field{
+    display: none; 
+/*     height: 450px; */
+}
+.chat-textarea{
+    position: fixed; 
+    bottom: 0px; 
+    right: 0px; 
+    z-index: 2147483647; 
+    box-sizing: content-box; 
+    overflow: hidden; 
+    border-radius: 5px; 
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;  */
+    width: 100%;
+    height: 100%;
+    background: grey;
+    /* box-shadow: rgb(0 0 0 / 10%) 0px 5px 15px; */
+}
+.chat-head{
+    background: rgb(64, 133, 145); 
+    height: 40px; 
+    line-height: 30px; 
+    font-size: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 5px 0px 5px 20px; 
+    font-family: Lato, sans-serif; 
+    color: rgb(255, 255, 255); 
+    cursor: pointer; 
+    box-sizing: content-box;
+}
+.chat-message{
+    list-style: none;
+    background: 0 0;
+    padding: 0;
+    margin: 0;
+}
+.chatbot-msg{
+    -webkit-box-ordinal-group: 2; 
+    /* -webkit-order: 1; */
+    -ms-flex-order: 1;
+    /* order: 1; */
+    border-top-left-radius: 2px;
+    padding: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: #000;
+}
+.user-msg {
+    -webkit-box-ordinal-group: 2;
+    /* -webkit-order: 1; */
+    -ms-flex-order: 1;
+    /* order: 1; */
+    border-top-left-radius: 2px;
+    padding: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content:end;
+    color: #000;
+}
+.msg {
+    word-wrap: break-word;
+    min-width: 50px;
+    max-width: 80%;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #dae1e7;
+}
+.user-textarea {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    height: 53px;
+    z-index: 99;
+    background-color: #fff;
+    border: none;
+    outline: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #000;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: rgba(250,250,250,.8);
+}
+.submit-msg{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 55px;
+    z-index: 99;
+    border: none;
+    cursor: pointer;
+}
+</style>
+<div id="WidgetRoot">
+    <div class="chatbot-wrapper">
+        <div class="chatbot-content">
+            <div class="chatbot-icon">
+                <img src="https://botman.io/img/logo.png">
+            </div>
+        </div>
+        <div class="chatbot-field">
+            <div class="chat-textarea">
+                <div class="chat-head" >
+                    <div style="display: flex; align-items: center; padding: 0px 30px 0px 0px; font-size: 15px; font-weight: normal;">Chatbot</div>
+                    <div class="chat-close">
+                        <svg fill="#FFFFFF" height="15" viewBox="0 0 15 15" width="15" xmlns="http://www.w3.org/2000/svg" style="margin-right: 15px; margin-top: 6px; vertical-align: middle;">
+                            <line x1="1" y1="15" x2="15" y2="1" stroke="white" stroke-width="1"></line>
+                            <line x1="1" y1="1" x2="15" y2="15" stroke="white" stroke-width="1"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div style="display: block; height: 415px; overflow: auto;">
+                    <ol class="chat-message" style="height: 390px;">
+                        <li class="chatbot-msg">
+                            <div class="msg">
+                                <div id="message" class="msg-text">
+                                    <!--<p>Hi!
+                                            <br>Welcome, I am Chatbot! 🙂
+                                        </p> -->
+                                </div>
+                                <div class="time"></div>
+                            </div>
+                        </li>
+                    </ol>
+                    <div>
+                        <input id="userText" class="user-textarea" type="text" placeholder="Send a message...">
+                        <input class="submit-msg" type="submit" value="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    var chatbotWidget = {};
+</script>
+<script type="module">
+    import {firstmsg, mainbgcolor} from './js/app.js';
+    var chatbotWidget = {};
+    // $('.msg-text').append('<p>'+firstmsg+'</p>');
+    // $('.chatbot-icon').css('background',mainbgcolor);
+    // $('.chat-head').css('background',mainbgcolor);
+    console.log('chatbot: '+'<p>'+firstmsg+'</p>');
+    console.log('chatbot: ' +mainbgcolor);   
+
+    $('.chatbot-icon > img').on('click',function(){
+        $('.chatbot-field').css('display','block');
+        $('.chat-textarea').css('box-shadow','rgb(0 0 0 / 10%) 0px 5px 15px');
+        $('.chatbot-icon').css('display','none');
+    });
+
+    $('.chat-close').on('click',function(){
+        $('.chatbot-field').css('display','none');
+        $('.chat-textarea').css('box-shadow','none');
+        $('.chatbot-icon').css('display','block');
+    });
+
+</script>
