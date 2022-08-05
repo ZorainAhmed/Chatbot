@@ -1,6 +1,6 @@
 import {chatbotWidgetApp} from './param.js';
-
-$('body').append('<div id="chatbot_id"></div>');
+var html = () => {
+    $('body').append('<div id="chatbot_id"></div>');
   $('#chatbot_id').append(
     `<div id="WidgetRoot">
     <div class="chatbot-wrapper">
@@ -42,57 +42,5 @@ $('body').append('<div id="chatbot_id"></div>');
         </div>
     </div>
 </div>`);
-
-$('.chatbot-icon > img').on('click',function(){
-  $('.chatbot-field').css('display','block');
-  $('.chat-textarea').css('box-shadow','rgb(0 0 0 / 10%) 0px 5px 15px');
-  $('.chatbot-icon').css('display','none');
-});
-
-$('.chat-close').on('click',function(){
-  $('.chatbot-field').css('display','none');
-  $('.chat-textarea').css('box-shadow','none');
-  $('.chatbot-icon').css('display','block');
-});
-  // firstmsg = chatbotWidget.introMessage;
-  // mainbgcolor = chatbotWidget.bubbleBackground;
-  // console.log(mainbgcolor);
-// };
-
-  
-// export {firstmsg,mainbgcolor};
-
-
-// alert(simple().introMessage);
-// let src = simple().frameEndpoint;
-// let firstmsg = simple().introMessage;
-// let mainbgcolor = simple().bubbleBackground;
-// // console.log('<p>'+firstmsg+'</p>');
-// // console.log(mainbgcolor);
-// var mainWidget = $( document ).ready(function() {
-//   setTimeout(function() {
-//     $('#chatbot_id').append("<iframe class='main-chatbot' src="+src+"></iframe>");
-//   }, 1000);
-// });
-
-// let firstmsg = chatbotWidget.introMessage;
-// let mainbgcolor = chatbotWidget.bubbleBackground;
-// var something = (function() {
-//   var executed = false;
-//   return function() {
-//       if (!executed) {
-//           executed = true;
-          
-//           console.log('App: '+'<p>'+firstmsg+'</p>');
-//           console.log('App: '+mainbgcolor);
-//           $('#chatbot_id').append("<iframe class='main-chatbot' src="+chatbotWidget.frameEndpoint+"></iframe>");
-//       }
-//   };
-// });
-// something();
-// export {firstmsg,mainbgcolor};
-
-
-// console.log('<p>'+firstmsg+'</p>');
-// console.log(mainbgcolor);
-
+  }
+  export {html};

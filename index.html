@@ -6,26 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
     <link rel="stylesheet" type="text/css" href="./chatapi/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./chatapi/css/pluginstyle.css">
 </head>
 <body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <div id="chatbot_id"></div>
+    
     <script> 
-        // var simple=function(){
-        //     var chatbotWidget = {
-        //         frameEndpoint: '/chatapi/chatbot.html',
-        //         title:'Chatbot',
-        //         introMessage: 'Hello, I am a chatbot! Please enter your name',
-        //         mainColor:'#c02026',
-        //         aboutText:'',
-        //         bubbleBackground:'#c02026',
-        //         headerTextColor: '#fff',
-        //     }
-        //     return chatbotWidget;
-        //     setTimeout(5000);
-        // }
         var chatbotWidget = {
-            frameEndpoint: '/chatapi/chatbot.html',
             title:'Chatbot',
             introMessage: 'Hello, I am a chatbot! Please enter your name',
             mainColor:'#c02026',
@@ -34,8 +21,6 @@
             headerTextColor: '#fff',
         }
     </script>
-    <!-- <script src="./chatapi/js/data.js" type="module" ></script> -->
-    <!-- <script src="./chatapi/js/app.js" type="module" ></script> -->
-    <script src="./chatapi/js/chatbot.js" type="module" ></script>
+    <script id="chatbotWidget" src="./chatapi/js/app.js" type="module"></script>
 </body>
 </html>
