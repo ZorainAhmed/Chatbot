@@ -33,11 +33,13 @@ export class ChatBot {
       let datetime = new Date().toLocaleTimeString();
       $('li:last-child .msg .message-time').append(datetime);
       $('.user-textarea').val('');
+      $('.chat-message').parent().animate({ scrollTop:3031 },"slow");
     })
     $('.user-textarea').on('keydown', function (e) {
       var key = e.which;
       if(key == 13) {
           $('.submit-msg').click();
+          $('.chat-message').parent().animate({ scrollTop:3031 },"slow");
           return false;
       }
     });
