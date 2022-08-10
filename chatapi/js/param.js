@@ -8,6 +8,7 @@ var chatbotWidgetApp = {
   }
   chatbotWidget.title ? chatbotWidgetApp.title = chatbotWidget.title : ''; 
   chatbotWidget.introMessage ? chatbotWidgetApp.introMessage = chatbotWidget.introMessage : ''; 
+  chatbotWidget.mainColor ? chatbotWidgetApp.mainColor = chatbotWidget.mainColor : ''; 
   chatbotWidget.bubbleBackground ? chatbotWidgetApp.bubbleBackground = chatbotWidget.bubbleBackground : ''; 
   chatbotWidget.headerTextColor ? chatbotWidgetApp.headerTextColor = chatbotWidget.headerTextColor : ''; 
   export {chatbotWidgetApp};

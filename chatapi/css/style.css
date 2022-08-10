@@ -1,4 +1,4 @@
-.main-chatbot{
+#chatbot_id{
     border: none;
     position: fixed; 
     bottom: 10px; 
@@ -6,9 +6,9 @@
     z-index: 2147483647; 
     box-sizing: content-box; 
     overflow: hidden; 
-    min-width: 410px; 
-    min-height: 520px;
+    max-width: 410px; 
+    max-height: 520px;
 }
-/* body{
+body{
     background: #280137;
-} */
+}
