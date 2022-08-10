@@ -1,5 +1,5 @@
 import {chatbotWidgetApp} from './param.js';
-var html = '';
+export let html = '';
 html += '<div id="WidgetRoot">';
     html += '<div class="chatbot-wrapper">';
         html += '<div class="chatbot-content">';
@@ -39,4 +39,4 @@ html += '<div id="WidgetRoot">';
     html += '</div>';
 html += '</div>';
 
-export {html};
+// export {html};
