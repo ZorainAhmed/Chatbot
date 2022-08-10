@@ -1,3 +1,6 @@
+/* body{
+    background: #280137;
+} */
 #chatbot_id{
     border: none;
     position: fixed; 
@@ -49,12 +52,15 @@
     position: fixed; 
     bottom: 0px; 
     right: 0px; 
+    width: min-content;
+    min-width: 400px;
     margin-bottom: 20px;
     margin-right: 20px;
     z-index: 2147483647; 
     box-sizing: content-box; 
     overflow: hidden; 
     border-radius: 5px; 
+    height: 522px;
     /* box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;  */
     /* width: 100%;
     height: 100%; */
@@ -132,8 +138,8 @@
     -webkit-user-select: none;
 }
 .user-textarea {
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 0px;
     /* left: 0;
     right: 0;
     width: 95%; */
@@ -143,23 +149,30 @@
     border: none;
     outline: 0;
     padding-left: 15px;
-    padding-right: 56px;
+    padding-right: 15px;
+    width: 320px;
     color: #000;
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.5;
-    background: rgba(250,250,250,.8);
+    /* background: rgba(250,250,250,.8); */
     resize: none;
 }
 .user-textarea::placeholder{
     padding-top: 15px;
 }
 .submit-msg{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     height: 57px;
     z-index: 99;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 443px){
+    .chat-textarea{
+        min-width: 275px;
+    }
 }
