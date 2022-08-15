@@ -15,11 +15,11 @@
 .chatbot-wrapper{
     position: fixed; 
     bottom: 0px; 
-    right: 0px; 
+    /* right: 0px;  */
     z-index: 2147483647; 
     box-sizing: content-box; 
     overflow: hidden; 
-    min-width: 400px; 
+    min-width: 120px; 
     min-height: 120px;
 }
 .chatbot-content{
@@ -51,11 +51,13 @@
 .chat-textarea{
     position: fixed; 
     bottom: 0px; 
-    right: 0px; 
+    /* rsight: 0px;  */
     width: min-content;
     min-width: 400px;
-    margin-bottom: 20px;
+    margin: 0 20px 20px 20px;
+    /* margin-bottom: 20px;
     margin-right: 20px;
+    margin-left: 20px; */
     z-index: 2147483647; 
     box-sizing: content-box; 
     overflow: hidden; 

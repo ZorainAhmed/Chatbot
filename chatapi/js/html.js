@@ -1,14 +1,14 @@
 import {chatbotWidgetApp} from './param.js';
 export let html = '';
 html += '<div id="WidgetRoot">';
-    html += '<div class="chatbot-wrapper">';
+    html += '<div class="chatbot-wrapper" style="'+chatbotWidgetApp.side+': 0px">';
         html += '<div class="chatbot-content">';
             html += '<div class="chatbot-icon" style="background:' +chatbotWidgetApp.bubbleBackground+'">';
                 html += '<img src="https://botman.io/img/logo.png">';
             html += '</div>';
         html += '</div>';
         html += '<div class="chatbot-field">';
-            html += '<div class="chat-textarea">';
+            html += '<div class="chat-textarea" style="'+chatbotWidgetApp.side+': 0px">';
                 html += '<div class="chat-head" style="background:' +chatbotWidgetApp.mainColor+ ';">';
                     html += '<div style="display: flex; align-items: center; padding: 0px 30px 0px 0px; font-size: 15px; font-weight: normal;">' + chatbotWidgetApp.title + '</div>';
                     html += '<div class="chat-close">';

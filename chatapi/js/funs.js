@@ -39,7 +39,7 @@ export class ChatBot {
       var key = e.which;
       if(key == 13) {
           $('.submit-msg').click();
-          $('.chat-message').parent().animate({ scrollTop:3031 },"slow");
+          $('.chat-message').parent().animate({ scrollTop:1000 },"slow");
           return false;
       }
     });
